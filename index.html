@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WEBLYST – Car Subscription</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <div class="logo">WEBLYST</div>
+
+      <nav class="nav-links">
+        <a href="#">Home</a>
+         <a href="#browse-items">Find your car</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-text">
+        <p class="eyebrow">Australia's most awarded car subscription platform</p>
+        <h1>Find your dream car<span class="text--green"> with WEBLYST</span><h1>
+        <p class="sub">Search by Model, Make or Keyword</p>
+
+        <form class="search-bar">
+          <input type="text" placeholder="Search by Model, Make or Keyword">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <div class="hero-image">
+        <img src="weblyst.svg" alt="Dashboard Illustration" class="hero-img">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SORTING SECTION -->
+<section id="browse-items" class="sorting-section">
+  <div class="container">
+    <h2 class="sort-title">Browse Items</h2>
+
+    <div class="sort-controls">
+      <label for="sort-select">Sort by:</label>
+      <select id="sort-select">
+        <option value="az">Alphabetical A → Z</option>
+        <option value="za">Alphabetical Z → A</option>
+        <option value="newest">Newest → Oldest</option>
+        <option value="oldest">Oldest → Newest</option>
+      </select>
+    </div>
+
+    <div id="items-container" class="items-grid">
+      <!-- JS will insert cards here -->
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  © 2026 Alphonsus Okonkwo — Frontend Sorting Project
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

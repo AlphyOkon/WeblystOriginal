@@ -182,6 +182,109 @@ body {
   font-size: 1rem;
 }
 
+/* SECTION BASE */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* GRID BASE */
+.steps-container,
+.features-grid,
+.dealer-grid,
+.testimonials-grid,
+.pricing-grid,
+.footer-columns {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+}
+
+.steps-container {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.features-grid,
+.dealer-grid,
+.testimonials-grid,
+.pricing-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.footer-columns {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* CARDS */
+.step-card,
+.feature-card,
+.dealer-card,
+.testimonial-card,
+.pricing-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 2px solid #1ede6b;
+  cursor: pointer;
+}
+
+.testimonial-card p {
+  font-style: italic;
+}
+
+.pricing-card .price {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-card ul li {
+  margin: 8px 0;
+}
+
+.pricing-card.popular {
+  border: 2px solid #1ede6b;
+}
+
+/* FOOTER */
+.full-footer {
+  background: #111;
+  color: #eee;
+  padding: 60px 20px;
+}
+
+.full-footer h3 {
+  margin-bottom: 15px;
+}
+
+.full-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.full-footer ul li {
+  margin: 8px 0;
+  color: #ccc;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  color: #aaa;
+}
+
+
 /* ITEMS GRID */
 .items-grid {
   display: grid;
@@ -208,15 +311,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* FOOTER */
-.footer {
-  margin-top: 4rem;
-  padding: 2rem 0;
-  text-align: center;
-  background: #e2e8f0;
-  color: #334155;
-  font-size: 1rem;
-}
 
 /* Responsive */
 

@@ -256,13 +256,21 @@ section {
 
 .pricing-card.popular {
   border: 2px solid #1ede6b;
+  background: #018d57;
 }
+
+.pricing-card.popular:hover {
+  background: #1ede6b;
+}
+
+
 
 /* FOOTER */
 .full-footer {
   background: #111;
   color: #eee;
   padding: 60px 20px;
+
 }
 
 .full-footer h3 {
@@ -283,6 +291,12 @@ section {
   margin-top: 40px;
   color: #aaa;
 }
+
+.footer-col li:hover {
+  color: #0cc744;
+  cursor: pointer;
+}
+
 
 
 /* ITEMS GRID */
@@ -309,6 +323,91 @@ section {
 .item-date {
   color: #64748b;
   font-size: 0.9rem;
+}
+
+/* Social Links */
+
+.about-me__links {
+    display: flex;
+    gap: 1.2rem;              /* space between icons */
+    margin-top: 1.5rem;
+    justify-content: center;  /* center horizontally */
+    align-items: center;
+}
+
+.about-me__link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #1ede6b;      /* soft neutral background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+}
+
+.about-me__link:hover {
+    background-color: #000;         /* dark hover */
+    color: #fff;                    /* icon turns white */
+    transform: translateY(-4px);    /* subtle lift */
+    text-decoration: none;   /* removes underline */
+  border: none; 
+}
+
+/* HAMBURGER ICON */
+.menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+  color: #018d57;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Hidden off-screen */
+  width: 250px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -2px 0 12px rgba(0,0,0,0.1);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #475569;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.sidebar a:hover {
+  color: #0cc744;
+}
+
+/* SHOW SIDEBAR */
+.sidebar.active {
+  right: 0;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
 

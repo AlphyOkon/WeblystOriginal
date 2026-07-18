@@ -32,7 +32,8 @@ searchForm.addEventListener("submit", (e) => {
     return;
   }
 
-  console.log("Searching for:", query);
+  document.getElementById("search-result").innerText = `You searched for: ${query}`;
+
 
   // Placeholder for future functionality:
   // - Filter car list
@@ -106,3 +107,11 @@ sortSelect.addEventListener("change", () => {
 
 // Initial load
 renderItems(items);
+
+// Menu toggle functionality
+const menuToggle = document.getElementById("menuToggle");
+const sidebarMenu = document.getElementById("sidebarMenu");
+
+menuToggle.addEventListener("click", () => {
+  sidebarMenu.classList.toggle("active");
+});

@@ -25,6 +25,36 @@ document.querySelector('a[href="#browse-items"]').addEventListener('click', func
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault(); // stops page reload
 
+  async function fetchCarData(query) {
+  try {
+    const response = await fetch(`https://api.api-ninjas.com/v1/cars?model=${query}`, {
+      headers: { 'X-Api-Key': 'ESBCEhJ4PpvRnU2UsmFkqIXTnGcMbyTHxdN8uBqs' }
+    });
+
+    const data = await response.json();
+
+    const resultBox = document.getElementById("search-result");
+
+    if (data.length === 0) {
+      resultBox.innerText = "No cars found for that search.";
+      return;
+    }
+
+    // Show first result (simple and clean)
+    const car = data[0];
+    resultBox.innerHTML = `
+      <p><strong>Make:</strong> ${car.make}</p>
+      <p><strong>Model:</strong> ${car.model}</p>
+      <p><strong>Year:</strong> ${car.year}</p>
+      <p><strong>Class:</strong> ${car.class}</p>
+    `;
+  } catch (error) {
+    console.error(error);
+    document.getElementById("search-result").innerText = "Error fetching car data.";
+  }
+}
+
+
   const query = searchInput.value.trim();
 
   if (query === "") {
@@ -32,7 +62,8 @@ searchForm.addEventListener("submit", (e) => {
     return;
   }
 
-  document.getElementById("search-result").innerText = `You searched for: ${query}`;
+ fetchCarData(query);
+
 
 
   // Placeholder for future functionality:
@@ -115,3 +146,4 @@ const sidebarMenu = document.getElementById("sidebarMenu");
 menuToggle.addEventListener("click", () => {
   sidebarMenu.classList.toggle("active");
 });
+

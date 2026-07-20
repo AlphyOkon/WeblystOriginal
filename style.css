@@ -449,11 +449,11 @@ section {
 
 .no-results {
   background: #fff;
-  padding: 1.2rem;
-  border-radius: 6px;
+  padding: 25px;
+  border-radius:10px;
   border: 2px solid #ef4444;
   color: #b91c1c;
-  font-weight: 600;
+  font-weight: 50;
   text-align: center;
   margin-top: 1rem;
   display: none;

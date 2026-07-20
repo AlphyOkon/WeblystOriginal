@@ -21,11 +21,31 @@ document.querySelector('a[href="#browse-items"]').addEventListener('click', func
   document.querySelector('#browse-items').scrollIntoView({ behavior: 'smooth' });
 });
 
-
 searchForm.addEventListener("submit", (e) => {
-  e.preventDefault(); // stops page reload
+  e.preventDefault();
 
-  async function fetchCarData(query) {
+  const query = searchInput.value.trim();
+  if (query === "") {
+    alert("Please enter a model, make, or keyword");
+    return;
+  }
+
+  fetchCarData(query);
+  searchInput.value = "";
+});
+
+async function fetchCarData(query) {
+  const resultBox = document.getElementById("search-result");
+  const spinner = document.getElementById("spinner");
+  const noResults = document.getElementById("no-results");
+
+  // Reset states
+  resultBox.classList.remove("active");
+  noResults.classList.remove("active");
+
+  // Show spinner
+  spinner.classList.add("active");
+
   try {
     const response = await fetch(`https://api.api-ninjas.com/v1/cars?model=${query}`, {
       headers: { 'X-Api-Key': 'ESBCEhJ4PpvRnU2UsmFkqIXTnGcMbyTHxdN8uBqs' }
@@ -33,36 +53,33 @@ searchForm.addEventListener("submit", (e) => {
 
     const data = await response.json();
 
-    const resultBox = document.getElementById("search-result");
+    // Hide spinner
+    spinner.classList.remove("active");
 
     if (data.length === 0) {
-      resultBox.innerText = "No cars found for that search.";
+      noResults.classList.add("active");
       return;
     }
 
-    // Show first result (simple and clean)
     const car = data[0];
+
     resultBox.innerHTML = `
-      <p><strong>Make:</strong> ${car.make}</p>
-      <p><strong>Model:</strong> ${car.model}</p>
-      <p><strong>Year:</strong> ${car.year}</p>
-      <p><strong>Class:</strong> ${car.class}</p>
+      <div class="car-card">
+        <h3>${car.make} ${car.model}</h3>
+        <p><strong>Year:</strong> ${car.year}</p>
+        <p><strong>Class:</strong> ${car.class}</p>
+      </div>
     `;
+
+    resultBox.classList.add("active");
+
   } catch (error) {
-    console.error(error);
-    document.getElementById("search-result").innerText = "Error fetching car data.";
+    spinner.classList.remove("active");
+    noResults.innerText = "Error fetching car data.";
+    noResults.classList.add("active");
   }
 }
 
-
-  const query = searchInput.value.trim();
-
-  if (query === "") {
-    alert("Please enter a model, make, or keyword");
-    return;
-  }
-
- fetchCarData(query);
 
 
 
@@ -72,7 +89,7 @@ searchForm.addEventListener("submit", (e) => {
   // - Navigate to results page
 
   searchInput.value = "";
-});
+;
 
 
 // OPTIONAL: Add subtle input glow on typing

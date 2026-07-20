@@ -131,6 +131,23 @@ body {
   background: #1ede6b;
 }
 
+/* API SEARCH RESULT BOX */
+.search-output {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #1ede6b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 500px;
+  text-align: left;
+   font-size: 1rem;
+  display: none; /* hidden until results appear */
+}
+
+.search-output.active {
+  display: block;
+}
 
 /* HERO IMAGE */
 .hero-image {
@@ -263,6 +280,13 @@ section {
 
 .pricing-card.popular:hover {
   background: #1ede6b;
+}
+
+.car-card {
+  padding: 1rem;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
 }
 
 
@@ -399,6 +423,46 @@ section {
 /* SHOW SIDEBAR */
 .sidebar.active {
   right: 0;
+}
+
+/* LOADING SPINNER */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #cbd5e1;
+  border-top-color: #018d57;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 1rem auto;
+  display: none; /* hidden until active */
+}
+
+.spinner.active {
+  display: block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.no-results {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 6px;
+  border: 2px solid #ef4444;
+  color: #b91c1c;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+  display: none;
+    outline: none;
+  border-color: #ef4444;
+}
+
+.no-results.active {
+  display: block;
 }
 
 /* MOBILE RESPONSIVE */

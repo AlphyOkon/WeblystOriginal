@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WEBLYST – Car Subscription</title>
+  <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/c28a4ffa77.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <div class="logo">WEBLYST</div>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+         <a href="find.html">Find your car</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <!-- Hamburger Icon -->
+<div class="menu-toggle" id="menuToggle">
+  ☰
+</div>
+
+<!-- Right Sidebar Menu -->
+<div class="sidebar" id="sidebarMenu">
+  <a href="index.html">Home</a>
+  <a href="find.html">Find your car</a>
+  <a href="#">Contact</a>
+</div>
+
+    </div>
+  </header>
+
+   <!-- HERO SECTION -->
+  <section class="hero">
+
+    <div class="container hero-grid">
+      
+
+      <div class="hero-text">
+        <p class="eyebrow">Australia's most awarded car subscription platform</p>
+        <h1>Find your dream car<span class="text--green"> with WEBLYST</span><h1>
+        <p class="sub">Search by Model, Make or Keyword</p>
+
+        <form class="search-bar">
+    <input type="text" placeholder="Search by Model, Make or Keyword">
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Spinner + Results BELOW the form -->
+  <div id="spinner" class="spinner"></div>
+  <div id="search-result" class="search-output"></div>
+  <div id="no-results" class="no-results">No cars found for that search.</div>
+</div>
+
+      <div class="hero-image">
+        <img src="weblyst.svg" alt="Dashboard Illustration" class="hero-img">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+
+  <!-- SORTING SECTION -->
+<section id="browse-items" class="sorting-section">
+  <div class="container">
+    <h2 class="sort-title">Browse<span class="text--green">  Items</span></h2>
+
+    <div class="sort-controls">
+      <label for="sort-select">Sort by:</label>
+      <select id="sort-select">
+        <option value="az">Alphabetical A → Z</option>
+        <option value="za">Alphabetical Z → A</option>
+        <option value="newest">Newest → Oldest</option>
+        <option value="oldest">Oldest → Newest</option>
+      </select>
+    </div>
+
+    <div id="items-container" class="items-grid">
+      <!-- Toyota Camry -->
+      <div class="item-card">
+        <h3 class="item-title">Toyota Camry</h3>
+        <p class="item-date">Date: 2024-05-10</p>
+      </div>
+
+      <!-- Chevrolet Silverado -->
+      <div class="item-card">
+        <h3 class="item-title">Chevrolet Silverado</h3>
+        <p class="item-date">Date: 2024-03-02</p>
+      </div>
+
+      <!-- Lexus RX -->
+      <div class="item-card">
+        <h3 class="item-title">Lexus RX</h3>
+        <p class="item-date">Date: 2023-12-15</p>
+      </div>
+
+      <!-- Ford F-150 -->
+      <div class="item-card">
+        <h3 class="item-title">Ford F-150</h3>
+        <p class="item-date">Date: 2024-06-01</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- HOW IT WORKS SECTION -->
+<!-- ========================= -->
+<section class="how-it-works">
+  <h2>How <span class="text--green"> It Works</span></h2>
+  <p class="section-subtitle">A simple, flexible way to drive the car you want.</p>
+
+  <div class="steps-container">
+    <div class="step-card">
+      <h3>1. Choose Your Car</h3>
+      <p>Select from a wide range of vehicles that fit your lifestyle.</p>
+    </div>
+
+    <div class="step-card">
+      <h3>2. Subscribe</h3>
+      <p>Pick a plan that works for you — no long-term commitment.</p>
+    </div>
+
+    <div class="step-card">
+      <h3>3. Drive</h3>
+      <p>Your car is delivered ready to go, with insurance included.</p>
+    </div>
+
+    <div class="step-card">
+      <h3>4. Swap Anytime</h3>
+      <p>Need something different? Swap cars whenever you want.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- FEATURES SECTION -->
+<!-- ========================= -->
+<section class="features">
+  <h2>Why Choose <span class="text--green"> Weblyst?</span></h2>
+  <p class="section-subtitle">Everything you need for a modern driving experience.</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <h3>No Long-Term Commitment</h3>
+      <p>Drive without being locked into a multi-year contract.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Insurance Included</h3>
+      <p>Your subscription covers insurance and essential protection.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Maintenance Included</h3>
+      <p>We handle servicing and maintenance — you just drive.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Swap Cars Anytime</h3>
+      <p>Switch vehicles whenever your needs change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- DEALER BENEFITS SECTION -->
+<!-- ========================= -->
+<section class="dealer-benefits">
+  <h2><span class="text--green"> Benefits</span> for Dealerships</h2>
+  <p class="section-subtitle">A modern subscription model that helps dealerships grow.</p>
+
+  <div class="dealer-grid">
+    <div class="dealer-card">
+      <h3>Increase Revenue</h3>
+      <p>Earn more through flexible subscription plans.</p>
+    </div>
+
+    <div class="dealer-card">
+      <h3>Reduce Risk</h3>
+      <p>Lower exposure with predictable monthly income.</p>
+    </div>
+
+    <div class="dealer-card">
+      <h3>Modern Subscription Model</h3>
+      <p>Offer customers a new way to drive without ownership.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- TESTIMONIALS SECTION -->
+<!-- ========================= -->
+<section class="testimonials">
+  <h2>What <span class="text--green"> Our Customers Say</span></h2>
+  <p class="section-subtitle">Real experiences from real drivers.</p>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p>"Weblyst made it so easy to get a car without the stress of buying."</p>
+      <h4>- Sarah M.</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"I love being able to swap cars whenever I want. Total freedom."</p>
+      <h4>- Daniel K.</h4>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"Insurance and maintenance included? This is the future of driving."</p>
+      <h4>- Priya S.</h4>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- PRICING SECTION -->
+<!-- ========================= -->
+<section class="pricing">
+  <h2>Subscription <span class="text--green">Plans</span></h2>
+  <p class="section-subtitle">Choose the plan that fits your lifestyle.</p>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <h3>Basic</h3>
+      <p class="price">$499 / month</p>
+      <ul>
+        <li>Insurance Included</li>
+        <li>Maintenance Included</li>
+        <li>1 Swap per Month</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card popular">
+      <h3>Standard</h3>
+      <p class="price">$699 / month</p>
+      <ul>
+        <li>Insurance Included</li>
+        <li>Maintenance Included</li>
+        <li>Unlimited Swaps</li>
+        <li>Priority Support</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card">
+      <h3>Premium</h3>
+      <p class="price">$899 / month</p>
+      <ul>
+        <li>Luxury Vehicles</li>
+        <li>Unlimited Swaps</li>
+        <li>VIP Support</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!-- FULL FOOTER SECTION -->
+<!-- ========================= -->
+<footer class="full-footer">
+  <div class="footer-columns">
+
+    <div class="footer-col">
+      <h3>Company</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Careers</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li>Help Center</li>
+        <li>Contact</li>
+        <li>FAQs</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Legal</h3>
+      <ul>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Follow Us</h3>
+      <ul>
+        <li>Instagram</li>
+        <li>Twitter</li>
+        <li>LinkedIn</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p class="footer-bottom">© 2026 Weblyst — Car Subscription Platform</p>
+
+<div class="about-me__links">
+                        <a href="" class="about-me__link">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="" class="about-me__link">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="" class="about-me__link">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+    </div>
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

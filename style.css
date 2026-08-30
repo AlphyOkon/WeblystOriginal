@@ -92,6 +92,49 @@ body {
   margin-bottom: 1.75rem;
 }
 
+/* HOME PAGE COVER */
+.homepage-cover {
+  padding: 6rem 0 7rem;
+  background: linear-gradient(to bottom right, #e8f5f0, #ffffff);
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cover-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cover-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.cover-subtitle {
+  font-size: 1.2rem;
+  color: #475569;
+  margin-bottom: 2.5rem;
+}
+
+.cover-btn {
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  background: #018d57;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.cover-btn:hover {
+  background: #1ede6b;
+  transform: translateY(-3px);
+}
+
+
 /* SEARCH BAR */
 .search-bar {
   display: flex;
@@ -124,11 +167,12 @@ body {
   color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: 0.25s ease;
 }
 
 .search-bar button:hover {
   background: #1ede6b;
+  transition: 0.25s ease;
 }
 
 /* API SEARCH RESULT BOX */
@@ -288,6 +332,109 @@ section {
   background: #f8fafc;
   border: 1px solid #cbd5e1;
 }
+
+/* --- Sorting Section Layout --- */
+.sorting-section {
+  padding: 3rem 1rem;
+}
+
+.sort-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Sort Controls --- */
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.sort-controls label {
+  font-size: 1rem;
+}
+
+#sort-select {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* --- Items Grid --- */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* --- Item Card --- */
+.item-card {
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-4px);
+}
+
+.item-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-date {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* Large Tablets (3 columns) */
+@media (max-width: 1024px) {
+  .items-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (2 columns) */
+@media (max-width: 768px) {
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sort-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile (1 column) */
+@media (max-width: 480px) {
+  .items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sort-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  #sort-select {
+    width: 100%;
+  }
+
+  .item-card {
+    padding: 1rem;
+  }
+}
+
 
 
 

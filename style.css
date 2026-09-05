@@ -59,6 +59,71 @@ body {
   color: #0cc744;
 }
 
+/* LOGIN ICON */
+.login-icon {
+  font-size: 1.4rem;
+  color: #475569;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.login-icon:hover {
+  color: #0cc744;
+}
+
+/* USER MENU */
+.user-menu {
+  position: relative;
+  margin-left: 1.5rem;
+  cursor: pointer;
+}
+
+.user-icon {
+  font-size: 1.5rem;
+  color: #475569;
+  transition: 0.2s ease;
+}
+
+.user-icon:hover {
+  color: #0cc744;
+}
+
+/* DROPDOWN */
+.user-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 180px;
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  z-index: 999;
+}
+
+.user-dropdown a {
+  padding: 10px 15px;
+  display: block;
+  color: #475569;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.user-dropdown a:hover {
+  background: #f1f5f9;
+  color: #0cc744;
+}
+
+/* SHOW DROPDOWN */
+.user-menu.active .user-dropdown {
+  display: flex;
+}
+
+
+
 /* HERO */
 .hero {
   padding: 5rem 0;

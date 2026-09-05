@@ -13,6 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// USER MENU DROPDOWN
+const userMenu = document.querySelector(".user-menu");
+const userIcon = document.querySelector(".user-icon");
+
+userIcon.addEventListener("click", () => {
+  userMenu.classList.toggle("active");
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+  if (!userMenu.contains(e.target)) {
+    userMenu.classList.remove("active");
+  }
+});
 
 // ===============================
 // SEARCH BAR FUNCTIONALITY (find.html only)

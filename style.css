@@ -535,6 +535,26 @@ section {
   cursor: pointer;
 }
 
+.full-footer ul li a {
+  color: #eee; /* white link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.full-footer ul li a:hover {
+  color: #0cc744; /* hover color */
+}
+
+/* Keep About Us link white even on hover */
+.full-footer ul li a[href*="about"] {
+  color: #ccc;
+}
+
+.full-footer ul li a[href*="about"]:hover {
+  color: #0cc744;
+}
+
+
 
 
 /* ITEMS GRID */

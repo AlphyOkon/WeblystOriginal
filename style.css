@@ -7,8 +7,8 @@
 
 body {
   font-family: "Inter", system-ui, sans-serif;
-  background: #f8fafc;
-  color: #0f172a;
+  background: radial-gradient( circle at 75% 20%, #01907d 0%, #ffffff 35%, #01907d 75% );
+  color: #000000dd;
   line-height: 1.5;
 }
 
@@ -42,6 +42,15 @@ body {
   color: #018d57;
   letter-spacing: 0.03em;
 }
+
+.logo-img {
+  height: 80px;       /* adjust size as needed */
+  width: auto;        /* keeps proportions */
+  object-fit: contain;
+  cursor: pointer;    /* shows clickable hand icon */
+  display: block;
+}
+
 
 .nav-links {
   display: flex;
@@ -160,7 +169,7 @@ body {
 /* HOME PAGE COVER */
 .homepage-cover {
   padding: 6rem 0 7rem;
-  background: linear-gradient(to bottom right, #e8f5f0, #ffffff);
+  background: radial-gradient( circle at 75% 20%, #01907d 0%, #ffffff 35%, #01907d 75% );
   text-align: center;
   border-bottom: 1px solid #e2e8f0;
 }
